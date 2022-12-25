@@ -1,0 +1,35 @@
+body {
+    font-family: 'Abel', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    color: blue;
+    margin: 0;
+    background-color: #F7F7F7;
+}
+
+.header {
+    background-color: #ebebeb;
+    height: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-title {
+    color: #ff4d4d;
+    font-size: 36px;
+    text-shadow: 2px 2px 2px #aaa;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.header-description {
+    color: #ff4d4d;
+    font-size: 22px;
+    text-shadow: 2px 2px 2px #aaa;
+    font-weight: bold;
+    margin: 18px auto;
+    text-align: left;
+
+}
+
