@@ -97,7 +97,8 @@ class DashPage:
             Output('my-graph', 'figure'),
             [Input('Year-slider', 'value')])(self.update_figure)
 
-        serve(self.app.server, host='127.0.0.1', port=5050)
+        self.app.server.run()
+        serve(self.app.server.run(), host='127.0.0.1', port=5050)
 
     def updete_output(self, value):
         fig_print = []
@@ -251,8 +252,8 @@ def update_figure(selected_Year):
 if __name__ == "__main__":
     numb = pd.read_csv('infl_date.csv')
     df1 = pd.read_csv('DateForBubleMyne.csv')
-    app.run_server(debug=True,
-                   host='127.0.0.1')
-    # dp = DashPage(numb, df1)
-    # dp.infa1 = "################################################################"
-    # dp.run()
+    # app.run_server(debug=True,
+    #                host='127.0.0.1')
+    dp = DashPage(numb, df1)
+    dp.infa1 = "################################################################"
+    dp.run()
